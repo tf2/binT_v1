@@ -1,0 +1,18 @@
+# Java implementation for LocusTree_v1
+# binT_v1 -Lacks structure creation and filling optimisation  
+
+# Setup & compile - download binT_v1 folder
+
+cd binT_v1 
+javac -d classes/ -cp classes/ src/bint_v1/*.java
+
+# Example
+
+# Create structure using bottom binsize 1000 and number children 2, using chr_file.txt (only chr1) 
+java -cp classes/ bint_v1.Main -m 1 -f test/chr1Test.txt -o test/mydata.dat -c test/chr_file.txt -r 1000 -n 2
+
+# Search structure using chr, start and stop positions
+java -cp classes/ bint_v1.Main -m 0 -f test/chr1Test.txt -o test/mydata.dat -c test/chr_file.txt -r 1000 -n 2 -s 1 -chr 1 -sta 2840453 -sto 2940453
+
+# Search Structure using level and node number
+java -cp classes/ bint_v1.Main -m 0 -f test/chr1Test.txt -o test/mydata.dat -c test/chr_file.txt -r 1000 -n 2 -s 0 -chr 1 -level 17 -node 2845
