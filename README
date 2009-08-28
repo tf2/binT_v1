@@ -3,7 +3,8 @@
 
 # Setup & compile - download binT_v1 folder
 
-cd binT_v1 
+cd binT_v1
+mkdir classes 
 javac -d classes/ -cp classes/ src/bint_v1/*.java
 
 # Example
